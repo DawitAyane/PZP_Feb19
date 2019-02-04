@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1de6b365-f8cc-4721-9002-31cf9862374c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../HelloWorld/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/out/production/HelloWorld/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/out/production/HelloWorld/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HelloWorld/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HelloWorld/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zusamenfassung.md" beforeDir="false" afterPath="$PROJECT_DIR$/../Zusamenfassung.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,9 +35,9 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-1341" />
-    <option name="y" value="206" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="-1528" />
+    <option name="y" value="140" />
     <option name="width" value="1400" />
     <option name="height" value="820" />
   </component>
@@ -54,7 +53,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549281654194" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1549281945957" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -99,7 +98,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1288" y="-8" width="1296" height="816" extended-state="6" />
+    <frame x="-1341" y="206" width="1400" height="820" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />
@@ -114,7 +114,7 @@
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6038012" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.6002907" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />

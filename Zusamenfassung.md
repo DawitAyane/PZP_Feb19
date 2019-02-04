@@ -17,4 +17,9 @@ System.out.println("Hello World");
 
 ### Ohne Zeilenumbruch
 System.out.print("Hello World ohne Zeilenumbruch");
+
+### Fehlermeldungen
+Fehlermeldungen werden auf der Konsole rot dargestellt. <br>
+System.err.print("Fehlermeldung ohne Zeilenumbruch"); <br>
+System.err.print("Fehlermeldung mit Zeilenumbruch"); <br>
     
