@@ -17,7 +17,8 @@ Haken setzen im Installer bei: Add Launcher (64 Bit), .java <br>
 **Keinen Haken** setzen bei "Install Jetbrains JRE"
 
 ### 4. GIT
-https://git-scm.com/download/win
+https://git-scm.com/download/win <br>
+Nano als Standardeditor auswählen, sonst alle Einstellungen unangetastet belassen.
 
 ### 5. Github Desktop
 https://desktop.github.com/ <br>
