@@ -8,7 +8,9 @@ https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655
 
 ### 2. IntelliJ Community 
 https://www.jetbrains.com/idea/download/#section=windows <br>
-Rechte Spalte - Community
+Rechte Spalte - Community <br>
+Haken setzen im Installer bei: Add Launcher (64 Bit), .java <br>
+*Keinen Haken* setzen bei "Install Jetbrains JRE"
 
 ### 3. Github Desktop
 https://desktop.github.com/ <br>
