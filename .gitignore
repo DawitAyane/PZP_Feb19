@@ -23,4 +23,6 @@
 hs_err_pid*
 
 # Ignore files from IntelliJ
-!workspace.xml
+workspace.xml
+tasks.xml
+
