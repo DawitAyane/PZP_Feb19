@@ -1,3 +1,5 @@
+import static java.lang.System.out;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello World!");
@@ -15,7 +17,7 @@ public class Main {
          */
 
         // Ausgaben auf der Konsole werden wiefolgt getätigt:
-        System.out.println("Etwas anderes!");   // Kommentare können auch hinter Befehle gesetzt werden!
+        out.println("Etwas anderes");   // Kommentare können auch hinter Befehle gesetzt werden!
 
         /*
         Befehle innerhalb eines Kommentars werden nicht ausgeführt!
@@ -24,8 +26,10 @@ public class Main {
         Zur Fehlersuche ist es oft hilfreich, Teile des Programms auszukommentieren!
          */
 
+        System.out.println("");
+
         // Schreiben Sie eine weitere Ausgabe "Meine erste eigene Ausgabe"
-        System.out.println("Meine erste eigene Ausgabe");
+        System.err.println("Meine erste eigene Ausgabe");
 
         //println() sorgt für einen Umbruch am Zeilenende, print() fügt keinen Zeilenumbruch hinzu
         System.out.print("Meine zweite ");
