@@ -18,7 +18,9 @@ Haken setzen im Installer bei: Add Launcher (64 Bit), .java <br>
 
 ### 4. GIT
 https://git-scm.com/download/win <br>
-Nano als Standardeditor auswählen, sonst alle Einstellungen unangetastet belassen.
+Nano als Standardeditor auswählen <br>
+Checkout as is, Commit as is ausählen <br>
+Sonst alle Einstellungen unangetastet belassen.
 
 ### 5. Github Desktop
 https://desktop.github.com/ <br>
