@@ -14,5 +14,7 @@ Rechte Spalte - Community
 https://desktop.github.com/ <br>
 Für alle Git-Interessierten: https://gitexplorer.com (Freiwillig und vorerst nicht relevant!)
 
-
+### 4. AnyDesk
+https://anydesk.de/download?os=win <br>
+Bitte installieren, nicht nur ausführen. Die Erfahrung hat gezeigt, dass ohne Installation manchmal Fehler auftreten.
 
