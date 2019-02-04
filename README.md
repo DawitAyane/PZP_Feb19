@@ -1,4 +1,4 @@
-# PZP_Feb19
+ # PZP_Feb19
 Prozedurale Programmierung Feburar 2019
 
 ## Setup der Entwicklungsumgebung
@@ -11,7 +11,7 @@ https://www.jetbrains.com/idea/download/#section=windows
 Rechte Spalte - Community
 
 ### 3. Github Desktop
-https://desktop.github.com/
+https://desktop.github.com/ \n
 Für alle Git-Interessierten: https://gitexplorer.com (Freiwillig und vorerst nicht relevant!)
 
 
