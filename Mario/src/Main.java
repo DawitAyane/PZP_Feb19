@@ -8,10 +8,10 @@ public class Main {
         System.out.println("    -----           ######");
         System.out.println("      |            #######");
         System.out.print("      |   ");
-        System.err.print("_____" );
+        System.out.print("_____" );
         System.out.println("   ########");
         System.out.print("     / \\  ");
-        System.err.print(" | |   ");
+        System.out.print(" | |   ");
         System.out.println("#########");
         System.out.println("--------------------------");
         System.out.println("");
