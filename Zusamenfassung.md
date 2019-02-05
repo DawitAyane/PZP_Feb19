@@ -45,4 +45,19 @@ https://unicode-table.com/de/ <br>
 Unicode Zeichen können in einem eigenen String mit \\u gefolgt von der Unicode Codierung eingegeben werden. <br>
 System.out.print("Preis: 239" + "\u20ac"); <br>
 Ausgabe: Preis: 239€
+
+## Verzweigungen
+### if(Bedingung) {Anweisung}
+Die Anweisung wird ausgeführt, wenn die Bedingung erfüllt ist. <br>
+Es können beliebig viele if Blöcke vor einem Else Block stehen. 
+
+### else if(Bedingung) {Anweisung}
+Die Bedingung wird geprüft, wenn die vorangehende Bedingung nicht erfüllt war. <br>
+Die Anweisung wir ausgeführt, wenn die aktuelle Bedingung erfüllt ist. <br>
+Es können beliebig viele else if Blöcke zwischen einem if und einem else Block stehen.
+
+### else {Anweisung}
+Die Anweisung wird ausgeführt, wenn die Bedingung nicht erfüllt ist. <br>
+Else kann nie alleine stehen.
+
     
