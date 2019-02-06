@@ -106,3 +106,13 @@ In der public static void Main ergänzen wir Scanner derScanner = new Scanner(Sy
 Strings können wir dann mit derScanner.nextLine(); auslesen. <br>
 Ganzzahlen mit derScanner.nextInt();
 
+## Schleifen
+### For-Schleife
+Häufig werden wir Teile unseres Programm öfter ausführen müssen. <br>
+Um nicht alles kopieren zu müssen, können wir uns Schleifen zu nutze machen.<br>
+Der allgemeine Aufbau einer For-Schleife sieht folgendermaßen aus: <br>
+for ( Zählvariable mit Anfangswert; Bedingung; Schrittweite) { <br>
+      // Anweisung, die wiederholt werden soll <br>
+} <br>
+Diese können wir beliebig oft ineinander schachteln, wie wir es beim Zeichnen eines Rechteckes nutzen.
+
