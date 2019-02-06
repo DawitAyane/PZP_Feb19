@@ -1,6 +1,9 @@
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
+        Scanner derScanner = new Scanner(System.in);
         // Boolean - true oder false - wahr oder falsch
         boolean antwort;    // Deklaration
 

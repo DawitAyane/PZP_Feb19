@@ -16,5 +16,29 @@ public class Main {
         System.out.println("Wie alt bist du?");
         int alter = derScanner.nextInt();
         System.out.println(alter + " Jahre");
+
+        // Prüfe Zahl ab
+        int antwort;
+
+        System.out.println("Frage");
+        antwort = derScanner.nextInt();
+        if(antwort == 1) {
+            // Wenn ja
+        }
+        else {
+            // Wenn nein
+        }
+
+        String response;
+        System.out.println("Frage");
+        response = derScanner.nextLine();
+        // Vorgestellt von Sören
+
+        if(response.equalsIgnoreCase("ja")) {
+
+        } else {
+
+        }
+
     }
 }
