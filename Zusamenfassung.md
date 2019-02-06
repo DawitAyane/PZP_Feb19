@@ -60,4 +60,25 @@ Es können beliebig viele else if Blöcke zwischen einem if und einem else Block
 Die Anweisung wird ausgeführt, wenn die Bedingung nicht erfüllt ist. <br>
 Else kann nie alleine stehen.
 
+## Operatoren
+### \> Größer
+if(alter > 17)<br>
+Alles, was größer 17 ist erfüllt die Bedingung.
+ 
+### \< Kleiner
+if(alter < 16) <br>
+Alles, was kleiner 16 ist erfüllt die Bedingung.
+### \>= Größer-gleich
+if(alter >= 18) <br>
+18 und alles, was größer 18 ist erfüllt die Bedingung.
+### \<= Kleiner-gleich
+if(alter <= 10) <br>
+10 und alles was, kleiner 10 ist erfüll die Bedingung. 
+### == Gleich
+if(alter == 21) <br>
+NUR 21 erfüllt die Bedingung
+### != Ungleich
+if(alter != 21) <br>
+ALLES AUßER 21 erfüllt die Bedingung
+
     
