@@ -60,6 +60,7 @@ Es können beliebig viele else if Blöcke zwischen einem if und einem else Block
 Die Anweisung wird ausgeführt, wenn die Bedingung nicht erfüllt ist. <br>
 Else kann nie alleine stehen.
 
+# Tag 3
 ## Operatoren
 ### \> Größer
 if(alter > 17)<br>
@@ -81,4 +82,27 @@ NUR 21 erfüllt die Bedingung
 if(alter != 21) <br>
 ALLES AUßER 21 erfüllt die Bedingung
 
-    
+## Datentypen
+### String
+Zeichenkette (32bit) <br>
+String meinWort = "Hallo";
+### int
+Ganzzahl (32bit) <br>
+int zahl = 3;
+### double
+Kommazahl (64bit) <br>
+double kommaZahl = 3.8; <br>
+!Achtung! Komma wird als Punkt geschrieben
+### boolean
+Kann zwei Werte annehmen, true oder false (wahr oder falsch).<br>
+boolean antwort = false; <br>
+if(antwort) entspricht if(antwort == true) <br>
+if(!antwort) entspricht if(antwort == false) <br>
+
+## Scanner
+Mit dem Scanner können wir Eingaben entgegennehmen. <br>
+Vor public class Main ergänzen wir import java.util.Scanner; <br>
+In der public static void Main ergänzen wir Scanner derScanner = new Scanner(System.in);<br>
+Strings können wir dann mit derScanner.nextLine(); auslesen. <br>
+Ganzzahlen mit derScanner.nextInt();
+

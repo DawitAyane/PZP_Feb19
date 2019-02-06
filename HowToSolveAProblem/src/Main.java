@@ -1,22 +1,27 @@
 public class Main {
 
     public static void main(String[] args) {
-        boolean antwort;
+        // Boolean - true oder false - wahr oder falsch
+        boolean antwort;    // Deklaration
 
         System.out.println("Funktioniert alles wie es soll?");
         antwort = false;
+        System.out.println(antwort);
+
         if (antwort) {
             System.out.println("Lass es so!");
             System.out.println("Es gibt kein Problem!");
         } else {
             System.out.println("Hast du dran rumgefummelt?");
             antwort = false;
+            System.out.println(antwort);
 
             if (antwort) {
                 System.out.println("Du Blödmann!");
 
                 System.out.println("Weiß jemand davon?");
-                antwort = false;
+                antwort = true;
+                System.out.println(antwort);
 
                 if (antwort) {
                     System.out.println("Du armes Schwein!");
@@ -26,11 +31,13 @@ public class Main {
                 }
             } else {
                 System.out.println("Bist du dafür verantwortlich?");
-                antwort = false;
+                antwort = true;
+                System.out.println(antwort);
 
                 if (antwort) {
                     System.out.println("Kannst du es jemand anderem anhängen?");
-                    antwort = false;
+                    antwort = true;
+                    System.out.println(antwort);
 
                     if (antwort) {
                         System.out.println("Es gibt kein Problem");
