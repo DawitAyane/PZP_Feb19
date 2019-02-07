@@ -42,11 +42,19 @@ public class Main {
         }
         // 2. - vorletzte Zeile
         for(int i = 1; i <= laenge - rahmen * 2; i++) {
-            System.out.print("#");
-            for(int j = 1; j <= breite - 2; j++) {
+            // Rahmen Teil 1 - Teil vor der Aussparung
+            for(int k = 1; k <= rahmen; k++) {
+                System.out.print("#");
+            }
+            // Aussparung
+            for(int j = 1; j <= breite - 2*rahmen; j++) {
                 System.out.print(" ");
             }
-            System.out.print("#");
+            // Rahemen Teil 2 - Teil nach der Aussparung
+            for(int k = 1; k <= rahmen; k++) {
+                System.out.print("#");
+            }
+            // Zeilenumbruch am Ende der Zeile
             System.out.println();
         }
         // Letzte Zeile
