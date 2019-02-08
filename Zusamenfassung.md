@@ -117,3 +117,14 @@ for ( Zählvariable mit Anfangswert; Bedingung; Schrittweite) { <br>
 Diese können wir beliebig oft ineinander schachteln, wie wir es beim Zeichnen eines Rechteckes nutzen.
 
 #Tag 4
+Bearbeitung des Projekts Rechteck
+
+#Tag 5
+##Ausgelagerten Methoden
+Wir können Teile unseres Programms zur besseren Struktur auslagern und bei Bedarf wieder aufrufen.
+### Auslagern
+static void methodenName() { Anweisungen, die ausgeführt werden sollen. }
+### Aufruf in der main Methode
+public static void main(String[] args) { <br>
+    methodenName(); <br>
+}
