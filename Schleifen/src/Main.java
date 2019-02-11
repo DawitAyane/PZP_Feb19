@@ -6,7 +6,7 @@ public class Main {
     static int breite;
     static Scanner derScanner = new Scanner(System.in);
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException{
         willkommen();
         leseLaengeBreite();
         // Abfrage: Ob gefüllt oder ungefüllt gezeichnet werden soll.
@@ -29,11 +29,12 @@ public class Main {
         System.out.println();
     }
 
-    static void zeichneRechteckGefuellt() {
+    static void zeichneRechteckGefuellt() throws InterruptedException{
         // 2. Gefülltes Rechteck
         for (int i = 1; i <= laenge; i++) {
             for (int j = 1; j <= breite; j++) {
                 System.out.print("#");
+                Thread.sleep(1000);
             }
             System.out.println();
         }
@@ -96,5 +97,3 @@ public class Main {
 
     }
 }
-
-#class ##
