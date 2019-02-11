@@ -10,7 +10,7 @@ public class Countdown {
         for(int i = 0; i <= startwert; i++) {
             System.out.print(i + " ");
             try{
-                Thread.sleep(500);
+                Thread.sleep(250);
             }catch(InterruptedException e){
                 e.printStackTrace();
             }
@@ -23,7 +23,7 @@ public class Countdown {
             System.out.print(i + " ");
 
             try{
-                Thread.sleep(500);
+                Thread.sleep(1000);
             }catch(InterruptedException e){
                 e.printStackTrace();
             }
