@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class Geometrie {
+    // Dreieck
     static int hoehe;
     static Scanner derScanner = new Scanner(System.in);
     public static void main(String[] args) {
