@@ -128,3 +128,31 @@ static void methodenName() { Anweisungen, die ausgeführt werden sollen. }
 public static void main(String[] args) { <br>
     methodenName(); <br>
 }
+
+#Tag 6
+TBD - To be done
+#Tag 7
+##while-Schleife
+Führt den Anweisungsblock solange aus, wie die Bedingung im Schleifenkopf erfüllt ist. <br>
+while(Bedingung) {<br>
+Anweisungen <br>
+}<br>
+Mit break; können wir jederzeit aus der Schleife springen. Praktisch um beispielsweise ganze Programme nach dem Durchlauf zu wiederholen.
+##switch case
+Bietet sich an, wenn wir wir mehrere explizite Werte prüfen möchten.<br>
+Ein Switch Case kann nur einzelne Werte prüfen, keine Wertebereiche! <br>
+switch(zahl) { <br>
+case 4: <br>
+... Anweisungen<br>
+break;
+case 5: 
+case 6: 
+case 7:
+... Anweisungen<br>
+break; <br>
+default: <br>
+... Wird ausgeführt, wenn kein Case weiter oben bereits ausgeführt wurde. Entsprich also dem else{} Block bei einer if/else Verzweigung. <br>
+break; <br>
+}
+
+
