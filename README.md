@@ -1,5 +1,18 @@
 # PZP_Feb19
 Prozedurale Programmierung Feburar 2019
+## Aufgabe Tag 8 Vormittag
+### Wiederholung Arrays 
+Was ist ein Array? Was sind ein- und zweidimensionale Arrays? <br>
+https://www.tutorialspoint.com/java/java_arrays.htm <br>
+Bearbeite auch die Aufagben, die auf folgender Seite ganz unten gestellt werden. <br>
+https://www.informatikzentrale.de/java-arrays-uebungen-loesung.html <br>
+Wie kann ich mithilfe von Schleifen durch Arrays gehen?
+### TicTacToe
+Formuliere in eigenen Worten, warum wir ein zweidimensionales Array aus Zahlenwerten verwenden. Wofür steht 0,1,-1?<br>u
+Wann hat jemand gewonnen? Welche Bedingung muss erfüllt sein? Versuche, es für den Computer zu formulieren. Verwende die Zahlen! <br>
+Versuche den Stand von gestern zu verstehen, wie können wir ein bestimmtes Feld belgen?<br>
+Wie funktionieren die Methoden zum Initialisieren und Belegen eines Felds?<br>
+Wann ist es untentschieden? Was kommt in unserem Feld vor, wenn kein Stein gesetzt wurde, was nicht vor, wenn alle Felder belegt sind? Versuche eine Schleife zu schreiben, die erkennt, wenn das Feld voll ist. Hinweis: mit break; können wir auch aus For Schleifen springen und diese abbrechen.<br>
 ## Aufgaben Tag 7
 
 ### Fertigstellung Aufgaben Freitag
