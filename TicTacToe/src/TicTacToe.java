@@ -1,12 +1,19 @@
+import java.util.Scanner;
 public class TicTacToe {
     // Golbale Variablen
     static int[][] feld = new int[3][3];
+    static Scanner derScanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         // Spielfeld mit 0 füllen
         initFeld();
         // Spielstein setzen
-        setzeStein(0, 0, 1);
+        System.out.print("X: ");
+        int x = derScanner.nextInt();
+        System.out.print("Y: ");
+        int y = derScanner.nextInt();
+
+        setzeStein(x, y, 1);
         // Spielfeld ausgeben
         gebeFeld();
     }
