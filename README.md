@@ -4,6 +4,7 @@ Prozedurale Programmierung Feburar 2019
 ### Wiederholung Arrays 
 Was ist ein Array? Was sind ein- und zweidimensionale Arrays? <br>
 https://www.tutorialspoint.com/java/java_arrays.htm <br>
+https://mein-javablog.de/java-arrays-zweidimensional/ <br>
 Bearbeite auch die Aufagben, die auf folgender Seite ganz unten gestellt werden. <br>
 https://www.informatikzentrale.de/java-arrays-uebungen-loesung.html <br>
 Wie kann ich mithilfe von Schleifen durch Arrays gehen?
