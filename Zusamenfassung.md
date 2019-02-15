@@ -116,11 +116,11 @@ for ( Zählvariable mit Anfangswert; Bedingung; Schrittweite) { <br>
 } <br>
 Diese können wir beliebig oft ineinander schachteln, wie wir es beim Zeichnen eines Rechteckes nutzen.
 
-#Tag 4
+# Tag 4
 Bearbeitung des Projekts Rechteck
 
-#Tag 5
-##Ausgelagerten Methoden
+# Tag 5
+## Ausgelagerten Methoden
 Wir können Teile unseres Programms zur besseren Struktur auslagern und bei Bedarf wieder aufrufen.
 ### Auslagern
 static void methodenName() { Anweisungen, die ausgeführt werden sollen. }
@@ -129,18 +129,18 @@ public static void main(String[] args) { <br>
     methodenName(); <br>
 }
 
-#Tag 6
+# Tag 6
 ## printf
 Mit System.out.printf() können wir Formatierungen auf unsere Ausgaben anwenden. <br>
 Ein toller Artikel der Beuth Hochschule: http://public.beuth-hochschule.de/~grude/PrintfAppletHilfe.html
-#Tag 7
-##while-Schleife
+# Tag 7
+## while-Schleife
 Führt den Anweisungsblock solange aus, wie die Bedingung im Schleifenkopf erfüllt ist. <br>
 while(Bedingung) {<br>
 Anweisungen <br>
 }<br>
 Mit break; können wir jederzeit aus der Schleife springen. Praktisch um beispielsweise ganze Programme nach dem Durchlauf zu wiederholen.
-##switch case
+## switch case
 Bietet sich an, wenn wir wir mehrere explizite Werte prüfen möchten.<br>
 Ein Switch Case kann nur einzelne Werte prüfen, keine Wertebereiche! <br>
 switch(zahl) { <br>
@@ -156,8 +156,8 @@ default: <br>
 ... Wird ausgeführt, wenn kein Case weiter oben bereits ausgeführt wurde. Entsprich also dem else{} Block bei einer if/else Verzweigung. <br>
 break; <br>
 }
-#Tag 8
-##Verzögerungen mit thread.sleep
+# Tag 8
+## Verzögerungen mit thread.sleep
 Mit thread.sleep(1000) können wir unser Programm um 1 sec in der Ausführung unterbrechen. <br>
 In den Runden Klammern steht die Anzahl der Millisekunden. <br>
 try<br>
@@ -169,14 +169,14 @@ try<br>
             e.printStackTrace();  // Sollten Fehler auftreten, werden diese ausgegeben<br>
         }<br>
 Wichtig! Thread.sleep(1000); muss in einen try-catch Block gebaut werden, da es Fehler auswerfen kann, welche wir auffangen müssen!
-##Modulo Operator
+## Modulo Operator
 Mit % (Modulo) können wir den Rest einer Division berechnen.<br>
 10 % 7 = 3<br>
 10 / 7 = 1 Rest 3<br>
 Der Rest ist hierbei relevant, dieser wird angegeben.<br>
 Der Modulo Operator (%) kann wie jeder anderer arithmetische Operator (+,-,*,/) verwendet werden.
 
-#Tag 9
+# Tag 9
 ## Verknüpfte Bedingungen
 Seither haben wir in einer if-Abfrage lediglich eine Bedingung geprüft<br>
 if(zahl == 5) { ... } <br>
@@ -198,7 +198,7 @@ Beispiel: zahl = 5<br>
 if(zahl > 8 || zahl < 10) { ... } <br>
 Der Anweisungsblock würde ausgeührt werden, da eine der Bedingungen erfüllt ist. <br>
 5 ist NICHT größer 8, aber kleiner 10. <br>
-#Tag 10
+# Tag 10
 ## Methoden mit Parameter
 Java für Dummies - Seite 214ff
 ## Methoden mit Rückgabetyp
