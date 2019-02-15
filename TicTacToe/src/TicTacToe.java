@@ -44,6 +44,8 @@ public class TicTacToe {
 
             // Prüfe, ob noch freie Felder vorhanden
             pruefeFeld();
+            // Prüfe, ob jemand gewonne hat
+            pruefeGewonnen();
         }
         System.out.println("Keine freien Felder vorhanden!");
     }
@@ -79,6 +81,8 @@ public class TicTacToe {
     }
     // Spielstein setzen
     static void setzeStein(int x, int y, int wert) {
+        // An der Stelle x,y wird der wert eingetragen, den wir übergeben.
+        // Das entspricht dem aktuellen Spieler, als 1 oder -1
         feld[x][y] = wert;
     }
 
@@ -159,6 +163,37 @@ public class TicTacToe {
             // dass wir in die nächste Zeile springen
             System.out.println();
         }
+    }
+
+    static void pruefeGewonnen() {
+        pruefeReihen();
+        pruefeSpalten();
+        pruefeDiagonalen();
+    }
+
+    static int pruefeReihen() {
+        int reihe = 0;
+        for(int x = 0; x < 3; x++) {
+            reihe += feld[x][0];
+        }
+        if(reihe == 3) {
+            System.out.println("X hat gewonnen!");
+        }
+        else if(reihe == -3) {
+            System.out.println("O hat gewonnen!");
+        }
+
+
+
+        return 0;
+    }
+
+    static int pruefeSpalten() {
+        return 0;
+    }
+
+    static int pruefeDiagonalen() {
+        return 0;
     }
 }
 
