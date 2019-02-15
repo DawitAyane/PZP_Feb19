@@ -23,7 +23,7 @@ Fehlermeldungen werden auf der Konsole rot dargestellt. <br>
 System.err.print("Fehlermeldung ohne Zeilenumbruch"); <br>
 System.err.println("Fehlermeldung mit Zeilenumbruch"); <br>
 
-#Tag 2
+# Tag 2
 ## Sonderzeichen auf der Konsole
 ### Backslash
 Um einen \ auszugeben, müssen wir zwei Backslashes ("\\\\") eintragen. <br>
