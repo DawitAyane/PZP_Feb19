@@ -50,16 +50,33 @@ public class Theorie {
 //        feld[1][2] = -1;
 //        feld[1][1] = 1;
 
-        // Schleifen abbrechen
-        for (int i = 1; i <= 50; i++) {
-            System.out.println(i);
-            if(i == 20) {
-                break;
-            }
-        }
+//        // Schleifen abbrechen
+//        for (int i = 1; i <= 50; i++) {
+//            System.out.println(i);
+//            if(i == 20) {
+//                break;
+//            }
+//        }
 
+     //   String meinString = "Hallo PZP_FEB19";
+    //    gebeAus(meinString, "Wie geht's?");
+        System.out.println(addiere(10,15));
 
+    }
 
+    // Methode mit Parameter
+    static void gebeAus(String ausgabe, String ausgabe2) {
+        System.out.println(ausgabe);
+        System.out.println(ausgabe2);
+    }
 
+    // Methode mit Rückgabetyp
+    static String gebeTextZurueck() {
+        return "Unsere zweite Rückgabe";
+    }
+
+    // Methode mit Rückgabetyp und Parameter
+    static int addiere(int a, int b) {
+        return a+b;
     }
 }

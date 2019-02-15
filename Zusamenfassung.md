@@ -130,7 +130,9 @@ public static void main(String[] args) { <br>
 }
 
 #Tag 6
-TBD - To be done
+## printf
+Mit System.out.printf() können wir Formatierungen auf unsere Ausgaben anwenden. <br>
+Ein toller Artikel der Beuth Hochschule: http://public.beuth-hochschule.de/~grude/PrintfAppletHilfe.html
 #Tag 7
 ##while-Schleife
 Führt den Anweisungsblock solange aus, wie die Bedingung im Schleifenkopf erfüllt ist. <br>
@@ -154,5 +156,55 @@ default: <br>
 ... Wird ausgeführt, wenn kein Case weiter oben bereits ausgeführt wurde. Entsprich also dem else{} Block bei einer if/else Verzweigung. <br>
 break; <br>
 }
+#Tag 8
+##Verzögerungen mit thread.sleep
+Mit thread.sleep(1000) können wir unser Programm um 1 sec in der Ausführung unterbrechen. <br>
+In den Runden Klammern steht die Anzahl der Millisekunden. <br>
+try<br>
+        {<br>
+            thread.sleep(5000);   // Programm wird für 5 Sekunden angehalten <br>
+        }<br>
+        catch (InterruptedException e)<br>
+        {<br>
+            e.printStackTrace();  // Sollten Fehler auftreten, werden diese ausgegeben<br>
+        }<br>
+Wichtig! Thread.sleep(1000); muss in einen try-catch Block gebaut werden, da es Fehler auswerfen kann, welche wir auffangen müssen!
+##Modulo Operator
+Mit % (Modulo) können wir den Rest einer Division berechnen.<br>
+10 % 7 = 3<br>
+10 / 7 = 1 Rest 3<br>
+Der Rest ist hierbei relevant, dieser wird angegeben.<br>
+Der Modulo Operator (%) kann wie jeder anderer arithmetische Operator (+,-,*,/) verwendet werden.
+
+#Tag 9
+## Verknüpfte Bedingungen
+Seither haben wir in einer if-Abfrage lediglich eine Bedingung geprüft<br>
+if(zahl == 5) { ... } <br>
+Wir können jedoch mehr als nur eine Bedingung setzen.
+### UND Verknüpfung
+Mit doppeltem kaufmännischem Und (&&) können wir eine UND Verknüpfung erstellen.<br>
+Diese ergibt true (wahr), wenn beide Bedingungen erfüllt sind.<br>
+Beispiel: zahl = 5<br>
+if(zahl > 2 && zahl < 10) { ... } <br>
+Der Anweisungsblock würde ausgeührt werden, da die Bedingungen erfüllt sind. <br>
+5 ist größer zwei UND kleiner 10. <br>
+if(zahl > 8 && zahl < 10) { ... } <br>
+Der Anweisungsblock würde  NICHT ausgeührt werden, da die Bedingungen erfüllt sind. <br>
+5 ist NICHT größer 8, aber kleiner 10. <br>
+### ODER Verknüpfung
+Mit zwei senkrechten Strichen können wir ODER Verknüpfungen einleiten. <br>
+Diese ergibt true, wenn mindestens eine Bedingung erfüllt ist.
+Beispiel: zahl = 5<br>
+if(zahl > 8 || zahl < 10) { ... } <br>
+Der Anweisungsblock würde ausgeührt werden, da eine der Bedingungen erfüllt ist. <br>
+5 ist NICHT größer 8, aber kleiner 10. <br>
+#Tag 10
+## Methoden mit Parameter
+Java für Dummies - Seite 214ff
+## Methoden mit Rückgabetyp
+Java für Dummies - Seite 216ff
+## Methoden mit Parameter und Rückgabetyp
+Methoden können gleichzeitig Parameter annehmen und einen Rückgabewert besitzen. Das eine schließt das andere nicht aus!
+
 
 

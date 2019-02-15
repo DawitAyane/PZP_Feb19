@@ -84,8 +84,11 @@ public class TicTacToe {
 
     // Spielfeld initialisieren
     static void initFeld() {
+        // Äußerer Zähler für die Reihen
         for(int y = 0; y < 3; y++) {
+            // Inneren Zähler für die Zeichen innerhalb einer Reihe
             for(int x = 0; x < 3; x++) {
+                // Bei jedem Durchgang wird das entsprechende Feld auf 0 gesetzt
                 feld[x][y] = 0;
             }
         }
