@@ -23,6 +23,20 @@ public class TicTacToe {
         // Spielablauf
         // Solange freiesFeld == true, wird die Schleife wiederholt
         while(freiesFeld) {
+            // Ausgabe welcher Spieler ist am Zug?
+            System.out.print("Spieler " + ((aktSpieler == 1) ? "1" : "2" ) + " ist am Zug!");
+            // Alternative
+            /* switch (aktSpieler) {
+                case -1:
+                    System.out.print("2");
+                    break;
+                case 1:
+                    System.out.print("1");
+                    break;
+            }
+            //System.out.print(((aktSpieler == 1) ? "1" : "2" ));
+            System.out.println(" ist am Zug!"); */
+
             // Benutzereingaben einlesen: An welche Position soll der Stein?
             System.out.print("X: ");
             int posX = derScanner.nextInt();
@@ -173,15 +187,31 @@ public class TicTacToe {
 
     static int pruefeReihen() {
         int reihe = 0;
-        for(int x = 0; x < 3; x++) {
-            reihe += feld[x][0];
+        // Äußerer Zähler: Zeilen
+        // 0: Unterste Zeile
+        // 1: Mittlere Zeile
+        // 2: Obere Zeile
+        for(int y = 0; y < 3; y++) {
+            // Innerer Zähler: Zeichen innerhalb einer Zeile
+            // 0: Linkes Zeichen
+            // 1: Zeichen in der Mitte
+            // 2: Rechte Zeichen
+            for (int x = 0; x < 3; x++) {
+                // Wert aus entsprechendem Feld wird auf die Variable reihe addiert
+                reihe += feld[x][y];
+            }
+            // Wenn reihe 3 oder -3 ergibt, haben wir einen Gewinner
+            if (reihe == 3) {
+                System.out.println("X hat gewonnen!");
+            } else if (reihe == -3) {
+                System.out.println("O hat gewonnen!");
+            }
+            // Wenn wir mit der Prüfung einer Reihe fertig sind, dürfen wir nicht vergessen
+            // die Variable reihe wieder auf 0 zu setzen, da wir sonst Ergebnisse aus der einen Reihe
+            // mit in die nächste addieren.
+            reihe = 0;
         }
-        if(reihe == 3) {
-            System.out.println("X hat gewonnen!");
-        }
-        else if(reihe == -3) {
-            System.out.println("O hat gewonnen!");
-        }
+
 
 
 
@@ -189,10 +219,53 @@ public class TicTacToe {
     }
 
     static int pruefeSpalten() {
+        int spalte = 0;
+        // Äußerer Zähler: Reihen
+        // 0: Linke Reihe
+        // 1: Mittlere Reihe
+        // 2: Rechte Reihe
+        for(int x = 0; x < 3; x++) {
+            // Innerer Zähler: Zeichen innerhalb einer Spalte
+            // 0: Unterstes Zeichen
+            // 1: Zeichen in der Mitte
+            // 2: Oberstes Zeichen
+            for (int y = 0; y < 3; y++) {
+                // Wert aus entsprechendem Feld wird auf die Variable spalte addiert
+                spalte += feld[x][y];
+            }
+            // Wenn reihe 3 oder -3 ergibt, haben wir einen Gewinner
+            if (spalte == 3) {
+                System.out.println("X hat gewonnen!");
+            } else if (spalte == -3) {
+                System.out.println("O hat gewonnen!");
+            }
+            // Wenn wir mit der Prüfung einer Spalte fertig sind, dürfen wir nicht vergessen
+            // die Variable spalte wieder auf 0 zu setzen, da wir sonst Ergebnisse aus der einen Spalte
+            // mit in die nächste addieren.
+            spalte = 0;
+        }
+        
+        
         return 0;
     }
 
     static int pruefeDiagonalen() {
+        // Diagonale links unten nach rechts oben
+        int diagonale = 0;
+        // Diagonlae links oben nach rechts unten
+        int diagonale2 = 0;
+
+        // Wir brauchen nur einen Zähler, da x und y immer gleich sind ([0][0],[1][1],[2][2])
+        for(int d = 0; d < 3; d++) {
+            diagonale += feld[d][d];    // diagonale  = feld[0][0] + feld[1][1] + feld[2][2]
+            diagonale2 += feld[d][2-d]; // diagonale2 = feld[0][2] + feld[1][1] + feld[2][0]
+        }
+        if (diagonale == 3 || diagonale2 == 3) {
+            System.out.println("X hat gewonnen!");
+        } else if (diagonale == -3 || diagonale2 == -3) {
+            System.out.println("O hat gewonnen!");
+        }
+
         return 0;
     }
 }
