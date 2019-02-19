@@ -6,7 +6,7 @@ public class Zustandautomat {
         double a = 0, b = 0;
         char operation = ' ';
 
-        while(zustand < 5) {
+        while(zustand < 10) {
             switch (zustand) {
                     // BootUp: Programmversion ausgeben
                 case 0:
@@ -58,8 +58,11 @@ public class Zustandautomat {
                     else {
                         zustand = 5;
                     }
-
-
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    break;
             }
         }
     }

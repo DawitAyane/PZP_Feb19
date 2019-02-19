@@ -24,10 +24,12 @@ public class TicTacToeZustandsautomat {
     public static void main(String[] args) {
         // Zustandsautomat
         while(zustand < 10) {
-            switch(zustand) {
+            switch (zustand) {
                 // BootUp
                 case 0:
                     bootUp();
+                    // Spielfeld mit 0 füllen
+                    initFeld();
                     zustand = 1;
                     break;
                 // Spielernamen einlesen
@@ -42,58 +44,54 @@ public class TicTacToeZustandsautomat {
                     break;
                 // Prüfungen ausführen
                 case 3:
-                    pruefeFeld();
                     pruefeGewonnen();
+                    pruefeFeld();
                     break;
                 // Spieler 1 gewinnt
                 case 4:
+                    gebeFeld();
                     System.out.println(nameSpieler1 + " hat gewonnen!");
+                    zustand = 7;
                     break;
                 // Spieler 2 gewinnt
                 case 5:
+                    gebeFeld();
                     System.out.println(nameSpieler2 + " hat gewonnen!");
+                    zustand = 7;
                     break;
                 // Unentschieden
                 case 6:
+                    gebeFeld();
+                    System.out.println("Das Spiel geht unenschieden aus!");
+                    zustand = 7;
                     break;
                 // Spiel wiederholen?
                 case 7:
+                    nochmalSpielen();
+
                     break;
                 // Spiel beenden
                 case 8:
+                    System.out.println("Spiel wird beendet!");
                     break;
             }
         }
+    }
 
+    // Fragen, ob nochmal gespielt werden soll
+    static void nochmalSpielen() {
+        System.out.print("Möchtet ihr nochmal spielen? [J]a oder [N]ein: ");
+        // Bugfix: Scanner übernimmt Enter aus Zahleingabe hier und fragt nicht nach neuer Eingabe
+        derScanner.nextLine();
 
-        // Spielfeld mit 0 füllen
-        initFeld();
-
-        // Spielablauf
-        // Solange freiesFeld == true, wird die Schleife wiederholt
-        while(freiesFeld) {
-            // Ausgabe welcher Spieler ist am Zug?
-            System.out.print("Spieler " + ((aktSpieler == 1) ? "1" : "2" ) + " ist am Zug!");
-            // Alternative
-            /* switch (aktSpieler) {
-                case -1:
-                    System.out.print("2");
-                    break;
-                case 1:
-                    System.out.print("1");
-                    break;
-            }
-            //System.out.print(((aktSpieler == 1) ? "1" : "2" ));
-            System.out.println(" ist am Zug!"); */
-
-
-
-            // Prüfe, ob noch freie Felder vorhanden
-            pruefeFeld();
-            // Prüfe, ob jemand gewonne hat
-            pruefeGewonnen();
+        if(derScanner.nextLine().toLowerCase().charAt(0) == 'j') {
+            zustand = 2;
+            initFeld();
+            System.out.println("Neues Spiel!");
         }
-        System.out.println("Keine freien Felder vorhanden!");
+        else {
+            zustand = 8;
+        }
     }
 
     // Begrüßung zu Beginn
@@ -208,7 +206,8 @@ public class TicTacToeZustandsautomat {
         // Wenn die Methode bis jetzt noch nicht abgebrochen wurde,
         // dann wurde kein freies Feld gefunden.
         // Daraus folgt => freiesFeld = false;
-        freiesFeld = false;
+        // Zustand 6 ist unentschieden
+        zustand = 6;
     }
 
     // Spielfeld ausgeben
@@ -249,8 +248,12 @@ public class TicTacToeZustandsautomat {
 
     static void pruefeGewonnen() {
         pruefeReihen();
-        pruefeSpalten();
-        pruefeDiagonalen();
+        if(zustand == 2)
+            pruefeSpalten();
+
+        if(zustand == 2)            // Wenn die if-Anweisung nur eine Anweisung umfasst,
+            pruefeDiagonalen();     // können die geschweiften Klammern weggelassen werden
+                                    // Entscheidend hier ist das nächste Semikolon
     }
 
     static void pruefeReihen() {
@@ -270,9 +273,13 @@ public class TicTacToeZustandsautomat {
             }
             // Wenn reihe 3 oder -3 ergibt, haben wir einen Gewinner
             if (reihe == 3) {
+                // Zustand 4 bedeuetet Spieler 1 gewinnt
                 zustand = 4;
+                return;
             } else if (reihe == -3) {
+                // Zustand 5 bedeuetet Spieler 2 gewinnt
                 zustand = 5;
+                return;
             }
             // Wenn wir mit der Prüfung einer Reihe fertig sind, dürfen wir nicht vergessen
             // die Variable reihe wieder auf 0 zu setzen, da wir sonst Ergebnisse aus der einen Reihe
@@ -299,10 +306,15 @@ public class TicTacToeZustandsautomat {
                 spalte += feld[x][y];
             }
             // Wenn reihe 3 oder -3 ergibt, haben wir einen Gewinner
+
             if (spalte == 3) {
+                // Zustand 4 bedeuetet Spieler 1 gewinnt
                 zustand = 4;
+                return;
             } else if (spalte == -3) {
+                // Zustand 5 bedeuetet Spieler 2 gewinnt
                 zustand = 5;
+                return;
             }
             // Wenn wir mit der Prüfung einer Spalte fertig sind, dürfen wir nicht vergessen
             // die Variable spalte wieder auf 0 zu setzen, da wir sonst Ergebnisse aus der einen Spalte
@@ -326,8 +338,10 @@ public class TicTacToeZustandsautomat {
         }
         if (diagonale == 3 || diagonale2 == 3) {
             zustand = 4;
+            return;
         } else if (diagonale == -3 || diagonale2 == -3) {
             zustand = 5;
+            return;
         }
         zustand = 2;
     }
