@@ -14,11 +14,22 @@ public class TicTacToeZustandsautomat {
     static boolean freiesFeld = true;
     // aktSpieler wechselt zwischen 1 und -1
     static int aktSpieler = 1;
-    // Zustandvariable
-    static int zustand = 0;
     // Spielernamen
     static String nameSpieler1;
     static String nameSpieler2;
+    // Zustandsliste
+    static final int BOOTUP = 0;
+    static final int NAMENLESEN = 1;
+    static final int KOORDLESEN = 2;
+    static final int PRUEFEN = 3;
+    static final int SP1WIN = 4;
+    static final int SP2WIN = 5;
+    static final int UNETSCHIDEDEN = 6;
+    static final int WDH = 7;
+    static final int BEENDEN = 8;
+    // Zustandvariable
+    static int zustand = BOOTUP;
+
 
     // Einstiegspunkt unseres Programms: Wenn wir das Programm ausführen, wird hier begonnen
     public static void main(String[] args) {
@@ -26,52 +37,52 @@ public class TicTacToeZustandsautomat {
         while(zustand < 10) {
             switch (zustand) {
                 // BootUp
-                case 0:
+                case BOOTUP:
                     bootUp();
                     // Spielfeld mit 0 füllen
                     initFeld();
-                    zustand = 1;
+                    zustand = NAMENLESEN;
                     break;
                 // Spielernamen einlesen
-                case 1:
+                case NAMENLESEN:
                     leseSpielernamen();
-                    zustand = 2;
+                    zustand = KOORDLESEN;
                     break;
                 // Koordinaten einlesen
-                case 2:
+                case KOORDLESEN:
                     gebeFeld();
                     leseKoordinaten(aktSpieler);
                     break;
                 // Prüfungen ausführen
-                case 3:
+                case PRUEFEN:
                     pruefeGewonnen();
                     pruefeFeld();
                     break;
                 // Spieler 1 gewinnt
-                case 4:
+                case SP1WIN:
                     gebeFeld();
                     System.out.println(nameSpieler1 + " hat gewonnen!");
-                    zustand = 7;
+                    zustand = WDH;
                     break;
                 // Spieler 2 gewinnt
-                case 5:
+                case SP2WIN:
                     gebeFeld();
                     System.out.println(nameSpieler2 + " hat gewonnen!");
-                    zustand = 7;
+                    zustand = WDH;
                     break;
                 // Unentschieden
-                case 6:
+                case UNETSCHIDEDEN:
                     gebeFeld();
                     System.out.println("Das Spiel geht unenschieden aus!");
-                    zustand = 7;
+                    zustand = WDH;
                     break;
                 // Spiel wiederholen?
-                case 7:
+                case WDH:
                     nochmalSpielen();
 
                     break;
                 // Spiel beenden
-                case 8:
+                case BEENDEN:
                     System.out.println("Spiel wird beendet!");
                     break;
             }
@@ -85,12 +96,12 @@ public class TicTacToeZustandsautomat {
         derScanner.nextLine();
 
         if(derScanner.nextLine().toLowerCase().charAt(0) == 'j') {
-            zustand = 2;
             initFeld();
             System.out.println("Neues Spiel!");
+            zustand = KOORDLESEN;
         }
         else {
-            zustand = 8;
+            zustand = BEENDEN;
         }
     }
 
@@ -118,7 +129,7 @@ public class TicTacToeZustandsautomat {
             // Nachdem ein Stein erfolgreich gesetzt wurde, wird der Spieler getauscht.
             spielerWechseln();
             // Nach erfolgreichem Zug wollen wir in den nächsten Zustand
-            zustand = 3;
+            zustand = KOORDLESEN;
         }
     }
     // Einlesen der Spielernamen
@@ -207,7 +218,7 @@ public class TicTacToeZustandsautomat {
         // dann wurde kein freies Feld gefunden.
         // Daraus folgt => freiesFeld = false;
         // Zustand 6 ist unentschieden
-        zustand = 6;
+        zustand = UNETSCHIDEDEN;
     }
 
     // Spielfeld ausgeben
@@ -274,11 +285,11 @@ public class TicTacToeZustandsautomat {
             // Wenn reihe 3 oder -3 ergibt, haben wir einen Gewinner
             if (reihe == 3) {
                 // Zustand 4 bedeuetet Spieler 1 gewinnt
-                zustand = 4;
+                zustand = SP1WIN;
                 return;
             } else if (reihe == -3) {
                 // Zustand 5 bedeuetet Spieler 2 gewinnt
-                zustand = 5;
+                zustand = SP2WIN;
                 return;
             }
             // Wenn wir mit der Prüfung einer Reihe fertig sind, dürfen wir nicht vergessen
@@ -287,7 +298,7 @@ public class TicTacToeZustandsautomat {
             reihe = 0;
         }
 
-        zustand = 2;
+        zustand = KOORDLESEN;
     }
 
     static void pruefeSpalten() {
@@ -309,11 +320,11 @@ public class TicTacToeZustandsautomat {
 
             if (spalte == 3) {
                 // Zustand 4 bedeuetet Spieler 1 gewinnt
-                zustand = 4;
+                zustand = SP1WIN;
                 return;
             } else if (spalte == -3) {
                 // Zustand 5 bedeuetet Spieler 2 gewinnt
-                zustand = 5;
+                zustand = SP2WIN;
                 return;
             }
             // Wenn wir mit der Prüfung einer Spalte fertig sind, dürfen wir nicht vergessen
@@ -337,13 +348,13 @@ public class TicTacToeZustandsautomat {
             diagonale2 += feld[d][2-d]; // diagonale2 = feld[0][2] + feld[1][1] + feld[2][0]
         }
         if (diagonale == 3 || diagonale2 == 3) {
-            zustand = 4;
+            zustand = SP1WIN;
             return;
         } else if (diagonale == -3 || diagonale2 == -3) {
-            zustand = 5;
+            zustand = SP2WIN;
             return;
         }
-        zustand = 2;
+        zustand = KOORDLESEN;
     }
 }
 

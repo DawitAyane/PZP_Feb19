@@ -66,6 +66,18 @@ public class Zustandautomat {
             }
         }
     }
+    static void test() {
+        int alter = 0;
+
+        Scanner derScanner = new Scanner(System.in);
+
+        
+
+
+
+
+
+    }
 
     static double addiere(double a, double b) {
         return a + b;
